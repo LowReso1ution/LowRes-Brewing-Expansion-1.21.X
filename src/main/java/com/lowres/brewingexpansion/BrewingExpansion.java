@@ -1,5 +1,6 @@
 package com.lowres.brewingexpansion;
 
+import com.lowres.brewingexpansion.block.ModBlocks;
 import com.lowres.brewingexpansion.item.ModItems;
 import org.slf4j.Logger;
 
@@ -51,6 +52,7 @@ public class BrewingExpansion {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -70,6 +72,9 @@ public class BrewingExpansion {
 
         }
 
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.THISTLE_BLOCK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

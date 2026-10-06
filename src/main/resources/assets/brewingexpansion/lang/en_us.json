@@ -1,6 +1,6 @@
 {
   "itemGroup.examplemod": "Example Mod Tab",
-  "block.examplemod.example_block": "Example Block",
+  "block.brewingexpansion.thistle_block": "Thistle",
   "item.brewingexpansion.thistle": "Thistle",
 
   "examplemod.configuration.title": "Example Mod Configs",
